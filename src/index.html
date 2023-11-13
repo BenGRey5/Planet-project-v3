@@ -1,17 +1,23 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Shape Tracker</title>
+    <title>Planet Age Calculator</title>
   </head>
   <body>
-    <h3>Enter three lengths to determine if they can make a triangle.</h3>
-    <form id="triangle-checker-form">
-      <label for="length1">Enter a number:</label>
-      <input id="length1" type="number" />
-      <label for="length2">Enter a number:</label>
-      <input id="length2" type="number" />
-      <label for="length3">Enter a number:</label>
-      <input id="length3" type="number" />
+    <h3>Let's find out hold old you are on other planets</h3>
+    <form id="Age-finder">
+      <label for="Age2">Enter 0 if trying to find current Earth age, enter other numbers to experiment</label>
+      <input id="Age2" type="number" />
+      <label for="Age1">If trying to find current Earth age put your age here.</label>
+      <input id="Age1" type="number" />
+      <label for="planetList">Please select a planet</label>
+      <select id="planetList">
+        <option value="earth">Earth</option>
+        <option value="mars">Mars</option>
+        <option value="venus">Venus</option>
+        <option value="jupiter">Jupiter</option>
+        <option value="mercury">Mercury</option>
+      </select>
       <button type="submit">Submit</button>
     </form>
     <div id="response"></div>
