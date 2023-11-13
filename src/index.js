@@ -1,7 +1,7 @@
 import "bootstrap";
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import "./css/styles.css";npm --
-import DDday from "./planet.test.js"; // Fix import statement
+import DDday from "./planet.test";
 
 function handleAgeFinderForm(event) {
   event.preventDefault();

@@ -1,5 +1,11 @@
 class DDday {
-    constructor(planet1 = 'Earth', planet2 = 'Mars', planet3 = 'Venus', planet4 = 'Jupiter', planet5 = 'Mercury') {
+    constructor(
+    planet1 = 'Earth',
+    planet2 = 'Mars',
+    planet3 = 'Venus',
+    planet4 = 'Jupiter',
+    planet5 = 'Mercury'
+    ) {
     this.planet1 = planet1;
     this.planet2 = planet2;
     this.planet3 = planet3;
@@ -7,7 +13,6 @@ class DDday {
     this.planet5 = planet5;
     }
 
-    // You can add additional methods for alternative ways of initializing the properties
     initializeWithNumbers() {
     this.planet1 = 4.147;
     this.planet2 = 1.62;
@@ -44,7 +49,7 @@ describe('DDday', () => {
     });
 
     describe('getAgeForPlanet', () => {
-    test('should return the age for a specific planet', () => {
+    test('should return the age for a specific planet (default values)', () => {
         const instance = new DDday();
 
         expect(instance.getAgeForPlanet('Earth')).toBe(0);
@@ -54,5 +59,18 @@ describe('DDday', () => {
         expect(instance.getAgeForPlanet('Mercury')).toBe(0);
         expect(instance.getAgeForPlanet('Nonexistent')).toBe(0);
     });
+
+    test('should return the age for a specific planet (after initializeWithNumbers)', () => {
+        const instance = new DDday();
+        instance.initializeWithNumbers();
+
+        expect(instance.getAgeForPlanet('Earth')).toBe(4.147);
+        expect(instance.getAgeForPlanet('Mars')).toBe(1.62);
+        expect(instance.getAgeForPlanet('Venus')).toBe(1);
+        expect(instance.getAgeForPlanet('Jupiter')).toBe(0.531);
+        expect(instance.getAgeForPlanet('Mercury')).toBe(0.083);
+        expect(instance.getAgeForPlanet('Nonexistent')).toBe(0);
+    });
     });
 });
+
