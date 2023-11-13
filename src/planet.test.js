@@ -8,7 +8,7 @@ class DDday {
     }
 
     // You can add additional methods for alternative ways of initializing the properties
-    initializeWithNumbers() {
+    checkType() {
     this.planet1 = 4.147;
     this.planet2 = 1.62;
     this.planet3 = 1;
