@@ -1,28 +1,33 @@
 <!DOCTYPE html>
-<html>
-  <head>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Planet Age Calculator</title>
-  </head>
-  <body>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+    
+</head>
+<body>
     <h3>Let's find out how old you are on other planets</h3>
     <form id="AgeFinder">
-      <label for="Age2">Enter 0 if trying to find current Earth age, enter other numbers to experiment</label>
-      <input id="Age2" type="number" />
-      <br></br>
-      <label for="Age1">If trying to find current Earth age put your age here.</label>
-      <input id="Age1" type="number" />
-      <br></br>
-      <label for="planetList">Please select a planet</label>
-      <select id="planetList">
-        <option value="Earth">Earth</option>
-        <option value="Mars">Mars</option>
-        <option value="Venus">Venus</option>
-        <option value="Jupiter">Jupiter</option>
-        <option value="Mercury">Mercury</option>
-      </select>
-      <button type="submit">Submit</button>
+        <label for="Age2">Enter 0 if trying to find current Earth age, enter other numbers to experiment</label>
+        <input id="Age2" type="number" />
+        <br></br>
+        <label for="Age1">If trying to find current Earth age put your age here.</label>
+        <input id="Age1" type="number" />
+        <br></br>
+        <label for="planetList">Please select a planet</label>
+        <select id="planetList">
+            <option value="Earth">Earth</option>
+            <option value="Mars">Mars</option>
+            <option value="Venus">Venus</option>
+            <option value="Jupiter">Jupiter</option>
+            <option value="Mercury">Mercury</option>
+        </select>
+        <button type="submit">Submit</button>
     </form>
     <div id="result"></div>
     <script src="index.js"></script>
-  </body>
+</body>
 </html>
+
