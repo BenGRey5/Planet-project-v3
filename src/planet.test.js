@@ -8,12 +8,16 @@ class DDday {
     }
 
     // You can add additional methods for alternative ways of initializing the properties
-    checkType() {
+    initializeWithNumbers() {
     this.planet1 = 4.147;
     this.planet2 = 1.62;
     this.planet3 = 1;
     this.planet4 = 0.531;
     this.planet5 = 0.083;
+    }
+
+    getAgeForPlanet(planet) {
+    return this[planet.toLowerCase()] || 0;
     }
 }
 
@@ -37,5 +41,18 @@ describe('DDday', () => {
     expect(instance.planet3).toBe(1);
     expect(instance.planet4).toBe(0.531);
     expect(instance.planet5).toBe(0.083);
+    });
+
+    describe('getAgeForPlanet', () => {
+    test('should return the age for a specific planet', () => {
+        const instance = new DDday();
+
+        expect(instance.getAgeForPlanet('Earth')).toBe(0);
+        expect(instance.getAgeForPlanet('Mars')).toBe(0);
+        expect(instance.getAgeForPlanet('Venus')).toBe(0);
+        expect(instance.getAgeForPlanet('Jupiter')).toBe(0);
+        expect(instance.getAgeForPlanet('Mercury')).toBe(0);
+        expect(instance.getAgeForPlanet('Nonexistent')).toBe(0);
+    });
     });
 });

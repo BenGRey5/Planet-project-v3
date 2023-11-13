@@ -8,7 +8,9 @@ function handleAgeFinderForm(event) {
   document.querySelector("#result").innerText = null; // Fix ID here
   const Age2 = parseInt(document.querySelector("#Age2").value); // Add #
   const Age1 = parseInt(document.querySelector("#Age1").value); // Add #
-  let planetList = document.querySelector("#planetList").value; // Add #
+  const planetList = document.querySelector("#planetList").value; // Add #
+  const instance = new DDday
+  const AgeForPlanet = instance.AgeForPlanet(planetList);
 }
 
 // Attach the event listener outside the function
