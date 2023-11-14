@@ -1,3 +1,6 @@
+import "bootstrap";
+import "bootstrap/dist/css/bootstrap.min.css";
+
 function handleAgeFinderForm(event) {
   event.preventDefault();
   document.querySelector("#result").innerText = null; // Fix ID here
