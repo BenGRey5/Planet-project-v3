@@ -1,5 +1,5 @@
 import "bootstrap";
-import "bootstrap/dist/css/bootstrap.min.css";
+import "../node_modules/bootstrap/min.css"
 
 function handleAgeFinderForm(event) {
   event.preventDefault();
