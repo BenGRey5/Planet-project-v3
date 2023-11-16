@@ -11,7 +11,11 @@ expect(instance.age).toEqual(5)
         const instance = new DDday(3);
         expect(instance.mercuryAge()).toEqual(12.5)
     })
-    
+    test('venus equals age', () => {
+        const instance = new DDday(3);
+        expect(instance.venusAge()).toEqual(4.84)
+    })
+  
 //     test('constructor should set planet properties with default values', () => {
 //     const instance = new DDday();
 

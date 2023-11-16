@@ -17,6 +17,9 @@ export class DDday {
     mercuryAge(){
     return this.age/0.24 
     }
+    venusAge(){
+        return parseFloat((this.age/0.62).toFixed(2))
+    }
 
 
     initializeWithNumbers() {
