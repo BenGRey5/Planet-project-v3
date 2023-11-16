@@ -15,7 +15,7 @@ export class DDday {
     // this.planet5 = planet5;
     }
     mercuryAge(){
-        
+    return this.age/0.24 
     }
 
 
