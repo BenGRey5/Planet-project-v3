@@ -1,16 +1,18 @@
 export class DDday {
     constructor(
-    planet1 = 'Earth',
-    planet2 = 'Mars',
-    planet3 = 'Venus',
-    planet4 = 'Jupiter',
-    planet5 = 'Mercury'
+        age
+    // planet1 = 'Earth',
+    // planet2 = 'Mars',
+    // planet3 = 'Venus',
+    // planet4 = 'Jupiter',
+    // planet5 = 'Mercury'
     ) {
-    this.planet1 = planet1;
-    this.planet2 = planet2;
-    this.planet3 = planet3;
-    this.planet4 = planet4;
-    this.planet5 = planet5;
+        this.age = age
+    // this.planet1 = planet1;
+    // this.planet2 = planet2;
+    // this.planet3 = planet3;
+    // this.planet4 = planet4;
+    // this.planet5 = planet5;
     }
 
     initializeWithNumbers() {
