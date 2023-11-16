@@ -14,6 +14,10 @@ export class DDday {
     // this.planet4 = planet4;
     // this.planet5 = planet5;
     }
+    mercuryAge(){
+        
+    }
+
 
     initializeWithNumbers() {
     this.planet1 = 4.147;
