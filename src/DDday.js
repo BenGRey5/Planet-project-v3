@@ -1,6 +1,6 @@
 export class DDday {
     constructor(
-        age
+        age, future
         // planet1 = 'Earth',
         // planet2 = 'Mars',
         // planet3 = 'Venus',
@@ -8,6 +8,7 @@ export class DDday {
         // planet5 = 'Mercury'
     ) {
         this.age = age
+        this.future = future
         // this.planet1 = planet1;
         // this.planet2 = planet2;
         // this.planet3 = planet3;
@@ -21,10 +22,16 @@ export class DDday {
         return parseFloat((this.age / 0.62).toFixed(2))
     }
     marsAge() {
-        return parseFloat((this.age/ 1.88).toFixed(2))
+        return parseFloat((this.age / 1.88).toFixed(2))
     }
     jupiterAge() {
-        return parseFloat((this.age/ 11.86).toFixed(2))
+        return parseFloat((this.age / 11.86).toFixed(2))
+    }
+    mercuryFuture() {
+        return parseFloat(((this.future - this.age) / 0.24).toFixed(2));
+    }
+    venusFuture() {
+        return parseFloat(((this.future - this.age) / 0.62).toFixed(2));
     }
 
 
