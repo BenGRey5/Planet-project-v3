@@ -37,7 +37,7 @@ describe('DDday', () => {
     })
     test('future minus age divided by jupiter equals years', () => {
         const instance = new DDday(3, 7);
-        expect(instance.jupitetFuture()).toEqual(.34)
+        expect(instance.jupiterFuture()).toEqual(.34)
     })
 
     //     test('constructor should set planet properties with default values', () => {

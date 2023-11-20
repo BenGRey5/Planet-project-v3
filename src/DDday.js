@@ -36,6 +36,9 @@ export class DDday {
     marsFuture() {
         return parseFloat(((this.future - this.age) / 1.88).toFixed(2));
     }
+    jupiterFuture() {
+        return parseFloat(((this.future - this.age) / 11.86).toFixed(2))
+    }
 
 
     initializeWithNumbers() {
