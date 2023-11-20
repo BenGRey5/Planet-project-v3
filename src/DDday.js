@@ -33,6 +33,9 @@ export class DDday {
     venusFuture() {
         return parseFloat(((this.future - this.age) / 0.62).toFixed(2));
     }
+    marsFuture() {
+        return parseFloat(((this.future - this.age) / 1.88).toFixed(2));
+    }
 
 
     initializeWithNumbers() {
