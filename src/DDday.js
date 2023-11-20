@@ -49,4 +49,4 @@ export class DDday {
     getAgeForPlanet(planet) {
         return this[planet.toLowerCase()] || 0;
     }
-} ffffff
+} 
