@@ -23,6 +23,9 @@ export class DDday {
     marsAge() {
         return parseFloat((this.age/ 1.88).toFixed(2))
     }
+    jupiterAge() {
+        return parseFloat((this.age/ 11.86).toFixed(2))
+    }
 
 
     initializeWithNumbers() {
