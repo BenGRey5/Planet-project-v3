@@ -44,10 +44,13 @@ export class DDday {
         return parseFloat(((this.age - this.past) / 0.24).toFixed(2));
     }
     venusPast() {
-        return parseFloat(((this.age - this.past) / 0.62).toFixed(2))
+        return parseFloat(((this.age - this.past) / 0.62).toFixed(2));
     }
     marsPast() {
         return parseFloat(((this.age - this.past) / 1.88).toFixed(2));
+    }
+    jupiterPast() {
+        return parseFloat(((this.age - this.past) / 11.86).toFixed(2));
     }
 
 
