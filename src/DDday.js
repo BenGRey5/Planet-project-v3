@@ -43,6 +43,9 @@ export class DDday {
     mercuryPast() {
         return parseFloat(((this.age - this.past) / 0.24).toFixed(2));
     }
+    venusPast() {
+        return parseFloat(((this.age - this.past) / 0.62).toFixed(2))
+    }
 
 
     initializeWithNumbers() {
