@@ -39,13 +39,17 @@ describe('DDday', () => {
         const instance = new DDday(3, 7);
         expect(instance.jupiterFuture()).toEqual(.34)
     })
-    test('age minus past equals years', () => {
+    test('age minus past equals  mercury years', () => {
         const instance = new DDday(28, 0, 5);
         expect(instance.mercuryPast()).toEqual(95.83)
     })
-    test('age minus past equals years', () => {
+    test('age minus past equals venus years', () => {
         const instance = new DDday(28, 0, 5);
         expect(instance.venusPast()).toEqual(37.1)
+    })
+    test('age minus past equals mars years', () => {
+        const instance = new DDday(28, 0, 5);
+        expect(instance.marsPast()).toEqual(15)
     })
 
     //     test('constructor should set planet properties with default values', () => {
