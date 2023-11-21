@@ -49,7 +49,7 @@ describe('DDday', () => {
     })
     test('age minus past equals mars years', () => {
         const instance = new DDday(28, 0, 5);
-        expect(instance.marsPast()).toEqual(15)
+        expect(instance.marsPast()).toEqual(12.23)
     })
 
     //     test('constructor should set planet properties with default values', () => {
