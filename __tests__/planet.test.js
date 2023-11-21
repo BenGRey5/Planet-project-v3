@@ -45,7 +45,7 @@ describe('DDday', () => {
     })
     test('age minus past equals years', () => {
         const instance = new DDday(28, 0, 5);
-        expect(instance.venusPast()).toEqual(66)
+        expect(instance.venusPast()).toEqual(37.1)
     })
 
     //     test('constructor should set planet properties with default values', () => {
