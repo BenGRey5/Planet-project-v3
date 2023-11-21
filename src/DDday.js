@@ -1,6 +1,6 @@
 export class DDday {
     constructor(
-        age, future
+        age, future, past
         // planet1 = 'Earth',
         // planet2 = 'Mars',
         // planet3 = 'Venus',
@@ -9,6 +9,7 @@ export class DDday {
     ) {
         this.age = age
         this.future = future
+        this.past = past
         // this.planet1 = planet1;
         // this.planet2 = planet2;
         // this.planet3 = planet3;

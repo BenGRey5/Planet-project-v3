@@ -1,4 +1,4 @@
-import { DDday } from "./DDday.js";
+import { DDday } from "../src/DDday.js";
 
 
 describe('DDday', () => {
@@ -38,6 +38,10 @@ describe('DDday', () => {
     test('future minus age divided by jupiter equals years', () => {
         const instance = new DDday(3, 7);
         expect(instance.jupiterFuture()).toEqual(.34)
+    })
+    test('age minus past equals years', () => {
+        const instance = new DDday(28, 0, 5);
+        expect(instance.mercuryPast()).toEqual(95.83)
     })
 
     //     test('constructor should set planet properties with default values', () => {
