@@ -38,7 +38,10 @@ export class DDday {
         return parseFloat(((this.future - this.age) / 1.88).toFixed(2));
     }
     jupiterFuture() {
-        return parseFloat(((this.future - this.age) / 11.86).toFixed(2))
+        return parseFloat(((this.future - this.age) / 11.86).toFixed(2));
+    }
+    mercuryPast() {
+        return parseFloat(((this.age - this.past) / 0.24).toFixed(2));
     }
 
 
