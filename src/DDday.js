@@ -67,6 +67,10 @@ export class DDday {
         const result = parseFloat(((positiveDifference - this.past) / 1.88).toFixed(2));
         return result
     }
-
+    jupiterAll() {
+        const positiveDifference = Math.abs(this.future - this.age);
+        const result = parseFloat(((positiveDifference - this.past) / 11.86).toFixed(2));
+        return result
+    }
 
 } 
