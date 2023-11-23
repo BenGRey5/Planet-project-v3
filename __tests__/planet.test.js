@@ -81,11 +81,11 @@ describe('DDday', () => {
     })
     test('future all jupiter', () => {
         const instance = new DDday(3, 7, 0)
-        expect(instance.jupiterAll()).toEqual(2.13);
+        expect(instance.jupiterAll()).toEqual(.34);
     })
     test('past all jupiter', () => {
         const instance = new DDday(28, null, 5)
-        expect(instance.jupiterAll()).toEqual(12.23);
+        expect(instance.jupiterAll()).toEqual(1.94);
     })
     
 
