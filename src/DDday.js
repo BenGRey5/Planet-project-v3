@@ -52,17 +52,11 @@ export class DDday {
     jupiterPast() {
         return parseFloat(((this.age - this.past) / 11.86).toFixed(2));
     }
-
-
-    initializeWithNumbers() {
-        this.planet1 = 4.147;
-        this.planet2 = 1.62;
-        this.planet3 = 1;
-        this.planet4 = 0.531;
-        this.planet5 = 0.083;
+    mercuryAll() {
+        const positiveDifference = Math.abs(this.future - this.age);
+        const result = parseFloat(((positiveDifference - this.past) / 0.24).toFixed(2));
+        return result
     }
 
-    getAgeForPlanet(planet) {
-        return this[planet.toLowerCase()] || 0;
-    }
+
 } 

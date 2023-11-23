@@ -55,6 +55,14 @@ describe('DDday', () => {
         const instance = new DDday(28, 0, 5);
         expect(instance.jupiterPast()).toEqual(1.94)
     })
+    test('future all mercury', () => {
+        const instance = new DDday(3, 7, 0)
+        expect(instance.mercuryAll()).toEqual(16.67);
+    })
+    test('past all mercury', () => {
+        const instance = new DDday(28, null, 5)
+        expect(instance.mercuryAll()).toEqual(95.83);
+    })
 
     //     test('constructor should set planet properties with default values', () => {
     //     const instance = new DDday();
