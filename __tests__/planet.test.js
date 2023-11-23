@@ -63,7 +63,13 @@ describe('DDday', () => {
         const instance = new DDday(28, null, 5)
         expect(instance.mercuryAll()).toEqual(95.83);
     })
-    fffff
+    test('future all venus', () => {
+        const instance = new DDday(3, 7, 0)
+        expect(instance.venusAll()).toEqual(6.5);
+    })
+    
+
+    
     //     test('constructor should set planet properties with default values', () => {
     //     const instance = new DDday();
 

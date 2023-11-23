@@ -57,6 +57,11 @@ export class DDday {
         const result = parseFloat(((positiveDifference - this.past) / 0.24).toFixed(2));
         return result
     }
+    venusAll() {
+        const positiveDifference = Math.abs(this.future - this.age);
+        const result = parseFloat(((positiveDifference - this.past) / 0.62).toFixed(2));
+        return result
+    }
 
 
 } 
