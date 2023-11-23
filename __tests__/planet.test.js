@@ -63,7 +63,7 @@ describe('DDday', () => {
         const instance = new DDday(28, null, 5)
         expect(instance.mercuryAll()).toEqual(95.83);
     })
-
+    fffff
     //     test('constructor should set planet properties with default values', () => {
     //     const instance = new DDday();
 
