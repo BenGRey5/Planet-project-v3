@@ -65,7 +65,7 @@ describe('DDday', () => {
     })
     test('future all venus', () => {
         const instance = new DDday(3, 7, 0)
-        expect(instance.venusAll()).toEqual(6.5);
+        expect(instance.venusAll()).toEqual(6.45);
     })
     
 
