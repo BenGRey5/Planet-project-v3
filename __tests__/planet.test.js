@@ -71,6 +71,14 @@ describe('DDday', () => {
         const instance = new DDday(28, null, 5)
         expect(instance.venusAll()).toEqual(37.1);
     })
+    test('future all mars', () => {
+        const instance = new DDday(3, 7, 0)
+        expect(instance.marsAll()).toEqual(6.45);
+    })
+    test('past all mars', () => {
+        const instance = new DDday(28, null, 5)
+        expect(instance.marsAll()).toEqual(37.1);
+    })
     
 
     
