@@ -1,59 +1,25 @@
-import "bootstrap";
-import "bootstrap/dist/css/bootstrap.min.css";
-import "./css/styles.css";
-import { DDday } from "../src/DDday.js";
+import 'bootstrap';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import './css/styles.css';
+import CurrencyExchange from '../src/currency.js';
 
-// Move the event listener outside the function
-window.addEventListener("load", function () {
-  document.querySelector("#AgeFinder").addEventListener("submit", handleAgeFinderForm);
+window.addEventListener('load', function () {
+  document.getElementById('CurrencyFinder').addEventListener('submit', handleCurrencyFinder);
 });
-
-function handleAgeFinderForm(event) {
+async function handleCurrencyFinder(event) {
   event.preventDefault();
-  document.querySelector("#result").innerText = null;
 
-  const Age1 = parseInt(document.querySelector("#Age1").value);
-  const Past1 = parseInt(document.querySelector("#Past1").value);
-  const Future1 = parseInt(document.querySelector("#Future1").value);
-  const planetList = document.querySelector("#planetList").value;
 
-  let calculatedAge;
+  const cash1 = document.querySelector("#currency1").value;
+  const cash2 = document.querySelector("#currency2").value;
+  const amount = parseInt(document.querySelector("#amount1").value);
 
-  const selectedTime = document.querySelector('input[name="Time"]:checked');
-
-  if (selectedTime) {
-    const timeValue = selectedTime.value;
-
-    if (timeValue === 'past') {
-      calculatedAge = new DDday(Age1, 0, Past1);
-    } else if (timeValue === 'future') {
-      calculatedAge = new DDday(Age1, Future1, 0);
-    }
-
-    let result;
-
-    switch (planetList) {
-      case 'Mercury':
-        result = calculatedAge ? calculatedAge.mercuryAll() : 'Calculated age is undefined';
-        break;
-      case 'Venus':
-        result = calculatedAge ? calculatedAge.venusAll() : 'Calculated age is undefined';
-        break;
-      case 'Mars':
-        result = calculatedAge ? calculatedAge.marsAll() : 'Calculated age is undefined';
-        break;
-      case 'Jupiter':
-        result = calculatedAge ? calculatedAge.jupiterAll() : 'Calculated age is undefined';
-        break;
-      default:
-        result = 'Invalid planet selection';
-    }
-
-    // Display the result
-    document.querySelector("#result").innerText = `Your age on ${planetList}: ${result}`;
+  try {
+    const result = await CurrencyExchange.getExchange(cash1, cash2, amount);
+    document.querySelector("#showRate").innerText = ("The exchange rate for your chosen currencies is " + result.conversionRate);
+    document.querySelector("#showAmount").innerText = ("The exchange amount for your chosen currencies and input amount is " + result.convertedAmount);
+  } catch (error) {
+    document.querySelector("#showRate").innerText = error.message;
+    document.querySelector("#showAmount").innerText = null;
   }
 }
-
-
-
-
